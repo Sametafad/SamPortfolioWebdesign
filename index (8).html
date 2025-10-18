@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Erro Psalmbach Fadri — Accounting Technology Specialist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root{
+      --nav-bg: rgba(0,0,0,0.36);
+      --card-bg: rgba(0,0,0,0.32);
+      --accent: rgba(191,223,241,1);
+      --muted: rgba(240,240,240,0.85);
+      --text: #ffffff;
+      --glass-border: rgba(255,255,255,0.06);
+    }
+
+    html,body { height:100%; }
+
+body {
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  min-height: 100vh;
+  margin: 0;
+  color: #fff;
+  background-color: #057dcd; /* fallback color */
+  background-image: url('https://i.pinimg.com/1200x/b4/6e/d3/b46ed3f3ff6258944069a5d75f7905bb.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+
+/* translucent overlay so backdrop-filter has visible effect */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(6px) brightness(0.9);
+  -webkit-backdrop-filter: blur(6px) brightness(0.9);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ensure page content stacks above the overlay */
+.container, nav, header, main, footer, .card {
+  position: relative;
+  z-index: 1;
+}
+
+    .container {
+      max-width:1100px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    /* NAV */
+    nav {
+      width:100%;
+      background: var(--nav-bg);
+      padding: 0.8rem 1.25rem;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      border-bottom: 1px solid var(--glass-border);
+      position: sticky;
+      top:0;
+      backdrop-filter: blur(6px);
+      z-index: 40;
+    }
+
+    nav h1 { font-size:1.1rem; font-weight:600; letter-spacing:0.2px; }
+    .nav-actions { display:flex; gap:.6rem; align-items:center; }
+    .status {
+      background: var(--accent);
+      color:#002; padding:.35rem .7rem; border-radius:18px; font-weight:700; font-size:.9rem;
+    }
+    .contact-mini { color:var(--muted); font-size:.9rem; }
+
+    /* HERO */
+    .hero {
+      display:flex;
+      gap:1.25rem;
+      align-items:center;
+      margin-top:1.25rem;
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      padding:1.25rem;
+      border-radius:12px;
+      border:1px solid var(--glass-border);
+    }
+
+    .portrait {
+      width:140px;
+      height:140px;
+      border-radius:50%;
+      object-fit:cover;
+      border:4px solid #00ffcc;
+      box-shadow:0 8px 24px rgba(0,0,0,0.25);
+      flex: 0 0 140px;
+      background:#ddd;
+    }
+
+    .hero-main { flex:1; }
+    .hero-main h2 { font-size:1.6rem; margin-bottom:.35rem; color:#fff; }
+    .hero-main p { color:var(--muted); font-size:1rem; margin-bottom:.6rem; }
+
+    .hero-meta { display:flex; gap:1rem; flex-wrap:wrap; align-items:center; color:var(--muted); font-size:.95rem; }
+
+    /* LAYOUT */
+    .grid {
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:1rem;
+      margin-top:1rem;
+    }
+
+    @media (max-width:980px){
+      .grid { grid-template-columns: 1fr; }
+      .portrait { width:120px; height:120px; }
+    }
+
+    /* CARD / SECTION */
+    .card {
+      background: var(--card-bg);
+      padding:1.1rem;
+      border-radius:10px;
+      border:1px solid var(--glass-border);
+    }
+
+    .section-title { font-size:1.05rem; margin-bottom:.6rem; color:#fff; font-weight:600; }
+
+    /* SUMMARY / SKILLS */
+    .summary p { color:var(--muted); }
+
+    .skills {
+      display:flex;
+      flex-wrap:wrap;
+      gap:.5rem;
+      margin-top:.6rem;
+    }
+    .skill {
+      background: rgba(255,255,255,0.06);
+      color:var(--muted);
+      padding:.35rem .6rem;
+      border-radius:8px;
+      font-size:.9rem;
+      border:1px solid rgba(255,255,255,0.03);
+    }
+
+    /* EXPERIENCE */
+    .experience-item { margin-bottom:1rem; }
+    .exp-head { display:flex; justify-content:space-between; align-items:flex-start; gap:.6rem; }
+    .exp-role { font-weight:600; color:#fff; }
+    .exp-company { color:var(--muted); font-size:.95rem; }
+    .exp-dates { color:rgba(240,240,240,0.6); font-size:.9rem; }
+    .exp-list { margin-top:.45rem; list-style: disc; padding-left:1.1rem; color:var(--muted); font-size:.96rem; }
+
+    /* CERTS / BADGES */
+    .badge-row { display:flex; gap:.6rem; flex-wrap:wrap; align-items:center; }
+    .badge {
+      display:flex; gap:.6rem; align-items:center;
+      background: rgba(255,255,255,0.03);
+      padding:.45rem .6rem; border-radius:8px; border:1px solid rgba(255,255,255,0.03);
+      font-size:.9rem; color:var(--muted);
+    }
+    .badge img { width:44px; height:44px; object-fit:contain; border-radius:6px; }
+
+    /* PORTFOLIO */
+    .portfolio-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: .8rem; margin-top:.6rem; }
+    .portfolio-card { background: rgba(0,0,0,0.22); border-radius:8px; overflow:hidden; border:1px solid rgba(255,255,255,0.03); }
+    .portfolio-card img { width:100%; display:block; }
+    .portfolio-card .meta { padding:.6rem; color:var(--muted); font-size:.94rem; }
+
+    /* CONTACT / DETAILS */
+    .contact-list { list-style:none; margin-top:.6rem; color:var(--muted); font-size:.95rem; display:flex; flex-direction:column; gap:.4rem; }
+    .contact-list a { color:var(--accent); text-decoration:none; font-weight:600; }
+
+    /* FOOTER */
+    footer { text-align:center; margin-top:1.25rem; color:rgba(255,255,255,0.85); font-size:.9rem; opacity:.95; }
+
+    /* micro interactions */
+    a.button {
+      display:inline-block; background:var(--accent); color:#001; padding:.55rem .9rem; border-radius:999px; font-weight:700; text-decoration:none;
+      transition: transform .12s ease;
+    }
+    a.button:hover { transform: translateY(-3px); }
+
+  </style>
+</head>
+<body>
+  <nav>
+    <div>
+      <h1>Erro Psalmbach Fadri</h1>
+      <div class="contact-mini">Accounting Technology Specialist • Quezon City, PH</div>
+    </div>
+    <div class="nav-actions">
+      <div class="status">Open to work</div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- HERO -->
+    <header class="hero card" role="banner">
+      <img class="portrait" src="https://media.licdn.com/dms/image/v2/D4E35AQEGbeSgrjBXBQ/profile-framedphoto-shrink_100_100/B4EZX_SkoXHkAk-/0/1743744813890?e=1761138000&v=beta&t=-pQ0bfBNbKY4U3NOLiAgnfnjw4cJeE8aUz5PiJGKAvE" alt="Erro Psalmbach Fadri portrait" />
+      <div class="hero-main">
+        <h2>Erro Psalmbach Fadri</h2>
+        <div style="font-weight:600;color:var(--accent);margin-bottom:.45rem">Accounting Technology Specialist</div>
+        <p class="hero-sub" style="color:var(--muted);margin-bottom:.6rem">
+         I've been long in the industry, building deep expertise in payroll and accounting systems and designing automated, data-driven solutions that combine Microsoft Power Platform, Excel automation, Power Query and macros, and ERP integrations such as Oracle Betsy, Oracle Cloud, SAP, and Esker to simplify complex processes, reduce manual effort, and improve data reliability; my work focuses on delivering secure, scalable Power Apps (canvas and model-driven) and Power Automate flows that enforce business rules, accelerate approvals, and ensure accurate data synchronization across finance systems, while the dashboards and reports I create with Power BI surface the right metrics for faster decision-making, embedded controls, and role-level access to protect sensitive information; my objective is to partner with organizations to streamline end-to-end payroll and accounting operations, cut processing time, eliminate reconciliation gaps, and enable finance teams with self-service analytics and governed automation so leaders can reallocate effort from manual tasks to strategic initiatives, reduce operational risk, and achieve measurable cost and time savings through repeatable, well-documented, and maintainable solutions.
+        </p>
+
+        <div class="hero-meta">
+          <div>Current: Application Finance Senior Analyst — Accenture</div>
+          <div>Phone: <strong style="color:var(--accent)">0977 815 3144</strong></div>
+          <div><a href="mailto:erropsalmbachfadri@gmail.com" class="button">Email</a></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- TWO COLUMN LAYOUT -->
+    <div class="grid">
+      <!-- LEFT: Main content -->
+      <main>
+        <!-- SUMMARY -->
+        <section class="card summary" aria-labelledby="summary-title">
+          <h3 id="summary-title" class="section-title">Summary</h3>
+          <p>
+            Accounting technology specialist with proven ability to automate payroll and accounting workflows, create maintainable Power Platform applications, and deliver insightful Power BI dashboards. Strong background in data transformation using Power Query and Excel macros, plus hands-on integrations with Oracle EBS, Oracle Cloud, SAP, and Workday.
+          </p>
+
+          <div style="margin-top:1rem;">
+            <h4 style="color:var(--muted);font-size:.98rem;margin-bottom:.5rem;font-weight:600;">Key strengths</h4>
+            <div class="skills" aria-hidden="false">
+              <div class="skill">Power Apps</div>
+              <div class="skill">Power Automate</div>
+              <div class="skill">Power BI</div>
+              <div class="skill">Power Query</div>
+              <div class="skill">Excel Macros & VBA</div>
+              <div class="skill">Oracle EBS / Cloud</div>
+              <div class="skill">SAP</div>
+              <div class="skill">Payroll Systems</div>
+              <div class="skill">Data Integration</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section class="card" aria-labelledby="experience-title" style="margin-top:1rem;">
+          <h3 id="experience-title" class="section-title">Work Experience</h3>
+
+          <div class="experience-item">
+            <div class="exp-head">
+              <div>
+                <div class="exp-role">Application Finance Senior Analyst</div>
+                <div class="exp-company">Accenture</div>
+              </div>
+              <div class="exp-dates">Jan 2023 — Present</div>
+            </div>
+            <ul class="exp-list">
+              <li>Design and develop business applications using Microsoft Power Apps (canvas & model-driven) to automate finance and payroll workflows.</li>
+              <li>Implement Power Automate flows to streamline approvals, notifications, and data synchronization across systems.</li>
+              <li>Create Power BI dashboards and reports for finance stakeholders with role-level security and scheduled refreshes.</li>
+              <li>Manage data integrations with Oracle EBS, Oracle Cloud and other payroll systems; implement security roles and business rules.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="exp-head">
+              <div>
+                <div class="exp-role">Package Application Senior Analyst (Finance)</div>
+                <div class="exp-company">Accenture</div>
+              </div>
+              <div class="exp-dates">Jan 2025 — Present</div>
+            </div>
+            <ul class="exp-list">
+              <li>Lead development of reusable components and governance for Power Platform solutions across client accounts.</li>
+              <li>Provide technical mentorship for app maker teams, perform code reviews, and enforce secure design patterns.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="exp-head">
+              <div>
+                <div class="exp-role">Payroll / Accounting Analyst</div>
+                <div class="exp-company">Previous roles (multiple)</div>
+              </div>
+              <div class="exp-dates">2016 — 2022</div>
+            </div>
+            <ul class="exp-list">
+              <li>Handled payroll processing, reconciliations, and account analysis; automated repetitive tasks with Excel macros and Power Automate.</li>
+              <li>Collaborated with cross-functional teams to translate business requirements into technical solutions.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- PORTFOLIO -->
+        <section class="card" aria-labelledby="portfolio-title" style="margin-top:1rem;">
+          <h3 id="portfolio-title" class="section-title">Portfolio Highlights</h3>
+          <div class="portfolio-grid">
+            <div class="portfolio-card">
+              <img src="https://zoomchartswebstorage.blob.core.windows.net/template-gallery/th-20241220-132553-power-bi-crm-analysis-report-thumbnail.png" alt="Power BI CRM Analysis" />
+              <div class="meta">Power BI CRM analysis — interactive KPI dashboard and customer analytics.</div>
+            </div>
+
+            <div class="portfolio-card">
+              <img src="https://zoomchartswebstorage.blob.core.windows.net/template-gallery/th-20241114-124423-power-bi-it-support-dashboard.png" alt="IT Support Dashboard" />
+              <div class="meta">Support operations dashboard — SLA tracking, automated alerts, visual trend analysis.</div>
+            </div>
+
+            <div class="portfolio-card">
+              <img src="https://zoomchartswebstorage.blob.core.windows.net/template-gallery/th_20231129_142954_toyin-uzlabots-thumbnail.webp" alt="Personal site / resume" />
+              <div class="meta">Personal resume website — responsive UI, custom typography, accessible layout.</div>
+            </div>
+
+            <div class="portfolio-card">
+              <img src="https://media.licdn.com/dms/image/v2/D4E22AQGm5TYFs2L0LQ/feedshare-shrink_2048_1536/B4EZmfnSq0IkAw-/0/1759319502872?e=1763596800&v=beta&t=vdplU6tz1PaJKCw4siPb33PQMJzQheuMPKLLTMrBp5I" alt="LinkedIn post preview" />
+              <div class="meta">Published case studies and project walkthroughs on LinkedIn to engage stakeholders.</div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- RIGHT: Sidebar -->
+      <aside>
+        <!-- CONTACT -->
+        <section class="card" aria-labelledby="contact-title">
+          <h3 id="contact-title" class="section-title">Contact</h3>
+          <ul class="contact-list">
+            <li><strong>Location:</strong> Quezon City, Philippines</li>
+            <li><strong>Phone:</strong> <a href="tel:+639778153144">0977 815 3144</a></li>
+            <li><strong>Email:</strong> <a href="mailto:erropsalmbachfadri@gmail.com">erropsalmbachfadri@gmail.com</a></li>
+            <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/erropsalmbachfadri" target="_blank" rel="noopener">linkedin.com/in/erropsalmbachfadri</a></li>
+          </ul>
+        </section>
+
+        <!-- EDUCATION -->
+        <section class="card" aria-labelledby="education-title" style="margin-top:1rem;">
+          <h3 id="education-title" class="section-title">Education</h3>
+          <div style="color:var(--muted);font-size:.95rem;">
+            <div style="font-weight:600;color:#fff;">Bachelor of Science in Accounting Technology</div>
+            <div>National College of Business and Arts</div>
+            <div style="margin-top:.35rem;color:rgba(240,240,240,0.7)">Jan 2014 — Oct 2018</div>
+            <div style="margin-top:.45rem;color:var(--muted)">Relevant coursework: Strategic decision-making; Financial accounting</div>
+          </div>
+        </section>
+
+        <!-- CERTIFICATIONS -->
+        <section class="card" aria-labelledby="certs-title" style="margin-top:1rem;">
+          <h3 id="certs-title" class="section-title">Certifications</h3>
+          <div style="display:flex;flex-direction:column;gap:.5rem;">
+            <div class="badge"><img src="https://brm-workforce.oracle.com/pdf/certview/images/OFAASOFA.png" alt="CORE HR" /> Certified Oracle Global Human
+Resources Cloud 2024
+Implementation Professional</div>
+            <div class="badge"><img src="https://brm-workforce.oracle.com/pdf/certview/images/OPCLD24OPN.png" alt="Cloud Payroll Consultant" /> Certified Oracle Payroll Cloud
+Implementation Professional</div>
+            <div class="badge"><img src="https://brm-workforce.oracle.com/pdf/certview/images/OMBPCXCFA1.png" alt="Payroll Fundamentas" /> Certified Oracle Payroll Cloud
+Implementation Professional</div>
+            <div class="badge"><img src="https://brm-workforce.oracle.com/pdf/certview/images/OMBPERPCFA1.png" alt="ERP" /> Certified ERP Specialist</div>
+          </div>
+        </section>
+
+        <!-- TECHNICAL SKILLS -->
+        <section class="card" aria-labelledby="skills-title" style="margin-top:1rem;">
+          <h3 id="skills-title" class="section-title">Technical Skills</h3>
+          <div style="margin-top:.5rem;">
+            <div class="skills" style="justify-content:flex-start;">
+              <div class="skill">Microsoft Excel</div>
+              <div class="skill">Power BI</div>
+              <div class="skill">Power Query</div>
+              <div class="skill">Power Macros / VBA</div>
+              <div class="skill">Power Automate</div>
+              <div class="skill">Sharepoint</div>
+              <div class="skill">Power Apps</div>
+              <div class="skill">Oracle EBS</div>
+              <div class="skill">Oracle Cloud</div>
+              <div class="skill">SAP</div>
+              <div class="skill">SQL</div>
+              <div class="skill">HTML</div>
+              <div class="skill">CSS</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- LANGUAGES -->
+        <section class="card" aria-labelledby="lang-title" style="margin-top:1rem;">
+          <h3 id="lang-title" class="section-title">Languages</h3>
+          <div style="color:var(--muted);margin-top:.5rem;">English • Filipino</div>
+        </section>
+
+      </aside>
+    </div>
+
+    <div style="margin-top:1rem; display:flex; gap:.6rem; justify-content:center; align-items:center;">
+      <a class="button" href="mailto:erropsalmbachfadri@gmail.com">Contact Me</a>
+      <a class="button" href="https://linkedin.com/in/erropsalmbachfadri" target="_blank" rel="noopener">View LinkedIn</a>
+      <a class="button" href="#" onclick="alert('Replace # with your resume PDF link'); return false;">Download Resume</a>
+    </div>
+
+    <footer>
+      &copy; 2025 Erro Psalmbach Fadri — Accounting Technology Specialist
+    </footer>
+  </div>
+</body>
+</html>
