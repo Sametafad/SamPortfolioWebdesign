@@ -26,7 +26,7 @@ body {
   margin: 0;
   color: #fff;
   background-color: #057dcd; /* fallback color */
-  background-image: url('https://i.pinimg.com/1200x/b4/6e/d3/b46ed3f3ff6258944069a5d75f7905bb.jpg');
+  background-image: url(https://i.pinimg.com/736x/cf/92/97/cf9297423d445f9b91aae4597b34f7b6.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -82,27 +82,38 @@ body::before {
     .contact-mini { color:var(--muted); font-size:.9rem; }
 
     /* HERO */
-    .hero {
-      display:flex;
-      gap:1.25rem;
-      align-items:center;
-      margin-top:1.25rem;
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
-      padding:1.25rem;
-      border-radius:12px;
-      border:1px solid var(--glass-border);
-    }
+   .hero {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   gap: 1rem;
+   margin-top: 1.25rem;
+   background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+   padding: 1.25rem;
+   border-radius: 50px;
+   border: 1px solid var(--glass-border);
+   }
 
-    .portrait {
-      width:140px;
-      height:140px;
-      border-radius:50%;
-      object-fit:cover;
-      border:4px solid #00ffcc;
-      box-shadow:0 8px 24px rgba(0,0,0,0.25);
-      flex: 0 0 140px;
-      background:#ddd;
-    }
+.portrait-wrapper {
+  width: 148px;
+  height: 148px;
+  border-radius: 50%;
+  padding: 4px;
+  background: conic-gradient(from 180deg, #ffffff 0%, #f0f0f0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+.portrait {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #ddd;
+}
 
     .hero-main { flex:1; }
     .hero-main h2 { font-size:1.6rem; margin-bottom:.35rem; color:#fff; }
@@ -205,7 +216,7 @@ body::before {
   <div class="container">
     <!-- HERO -->
     <header class="hero card" role="banner">
-      <img class="portrait" src="https://media.licdn.com/media/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png" />
+      <img class="portrait" src="https://th.bing.com/th/id/OIP.nOFrU3_hNHlNCruSAmdClwAAAA?w=147&h=150&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" />
       <div class="hero-main">
         <h2>Erro Psalmbach Fadri</h2>
         <div style="font-weight:600;color:var(--accent);margin-bottom:.45rem">Accounting Technology Specialist</div>
@@ -258,27 +269,32 @@ body::before {
                 <div class="exp-role">Application Finance Senior Analyst</div>
                 <div class="exp-company">Accenture</div>
               </div>
-              <div class="exp-dates">Jan 2023 — Present</div>
+              <div class="exp-dates">Jan 2025 — Present</div>
             </div>
             <ul class="exp-list">
-              <li>Design and develop business applications using Microsoft Power Apps (canvas & model-driven) to automate finance and payroll workflows.</li>
-              <li>Implement Power Automate flows to streamline approvals, notifications, and data synchronization across systems.</li>
-              <li>Create Power BI dashboards and reports for finance stakeholders with role-level security and scheduled refreshes.</li>
-              <li>Manage data integrations with Oracle EBS, Oracle Cloud and other payroll systems; implement security roles and business rules.</li>
+               <li>Design and develop business applications using Microsoft Power Apps (canvas & model-driven) to automate finance and payroll workflows.</li>
+               <li>Implement Power Automate flows to streamline approvals, notifications, and data synchronization across systems.</li>
+               <li>Create Power BI dashboards and reports for finance stakeholders with role-level security and scheduled refreshes.</li>
+               <li>Manage data integrations with Oracle EBS, Oracle Cloud and other payroll systems; implement security roles and business rules.</li>
+               <li>Develop and test Power Apps solutions with embedded security governance, ensuring compliance with data access policies and audit requirements.</li>
+               <li>Introduce modular UI components and dynamic error-handling logic to enhance user experience and resilience across finance applications.</li>
             </ul>
           </div>
 
           <div class="experience-item">
             <div class="exp-head">
               <div>
-                <div class="exp-role">Package Application Senior Analyst (Finance)</div>
+                <div class="exp-role">Accounts Payable Specialist II  (Finance)</div>
                 <div class="exp-company">Accenture</div>
               </div>
-              <div class="exp-dates">Jan 2025 — Present</div>
+              <div class="exp-dates">Oct 2021 — Dec 2024</div>
             </div>
             <ul class="exp-list">
-              <li>Lead development of reusable components and governance for Power Platform solutions across client accounts.</li>
-              <li>Provide technical mentorship for app maker teams, perform code reviews, and enforce secure design patterns.</li>
+              <li>Oversee end-to-end AP operations: invoice review, coding, ACH check payments, and vendor reconciliation</li>
+              <li>Maintain accurate vendor records and support month-end year-end close activities, including journal entries and accruals</li>
+              <li>Resolve payment discrepancies and respond to vendor internal inquiries with professionalism and attention to detail</li>
+              <li>Analyze invoice aging and unreceipted items to identify bottlenecks, improve cash flow forecasting, and support cost control</li>
+              <li>Drive process improvements using Power Platform, Power Apps (I Logged Time, Vendor bank verification), and Power BI dashboards for real-time visibility into invoice and goods receipt statuses</li>
             </ul>
           </div>
 
@@ -312,13 +328,13 @@ body::before {
             </div>
 
             <div class="portfolio-card">
-              <img src="https://zoomchartswebstorage.blob.core.windows.net/template-gallery/th_20231129_142954_toyin-uzlabots-thumbnail.webp" alt="Personal site / resume" />
-              <div class="meta">Personal resume website — responsive UI, custom typography, accessible layout.</div>
+              <img src="https://media.licdn.com/dms/image/v2/D4E22AQHPV6iSX8psKA/feedshare-shrink_800/feedshare-shrink_800/0/1724922261136?e=1765411200&v=beta&t=nmIG6oFCsOuK-DFHkTJ4gu2Bck7wCdZZAZmCpeKofIM" />
+              <div class="meta">Power Apps Canvas  — A secure Power Apps solution that streamlines vendor onboarding by validating bank details, enforcing approval workflows, and ensuring compliance with financial governance standards. .</div>
             </div>
 
             <div class="portfolio-card">
               <img src="https://media.licdn.com/dms/image/v2/D4E22AQGm5TYFs2L0LQ/feedshare-shrink_2048_1536/B4EZmfnSq0IkAw-/0/1759319502872?e=1763596800&v=beta&t=vdplU6tz1PaJKCw4siPb33PQMJzQheuMPKLLTMrBp5I" alt="LinkedIn post preview" />
-              <div class="meta">Published case studies and project walkthroughs on LinkedIn to engage stakeholders.</div>
+              <div class="meta">Power Apps Canvas - A application solution designed to support employees during bench periods by providing structured training modules, skill development resources, and progress tracking empowering readiness for upcoming projects and accelerating re-deployment.</div>
             </div>
           </div>
         </section>
